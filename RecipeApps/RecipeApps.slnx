@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="../../CPUFramework/CPUFramework.csproj" />
+  <Project Path="RecipeWinForms/RecipeWinForms.csproj" />
+</Solution>
