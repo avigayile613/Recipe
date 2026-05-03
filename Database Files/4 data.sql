@@ -67,6 +67,7 @@ union select 'black pepper', null
 union select 'salt', null
 union select 'garlic powder', null
 union select 'onion powder', null
+union select 'thyme', null 
 union select 'vanilla pudding', null
 union select 'whipped cream cheese', null
 union select 'sour cream cheese', null
@@ -133,13 +134,13 @@ with x as(
    union select 'Butter Muffins', 7, 1, null, 'cup', 'flour', null 
    union select 'Butter Muffins', 8, 2, null, 'teaspoon', 'baking powder', null 
    union select 'Israeli Salad', 1, 2, null, null, 'tomato', null
-   union select 'Israli Salad', 2, 2, null, null, 'cucumber', null
-   union select 'Israli Salad', 3, 1, 'small', null, 'red onion', null
-   union select 'Israli Salad', 4, 2, 'small', null, 'pickle', null
-   union select 'Israli Salad', 5, 1, null, 'teaspoon', 'salt', null
-   union select 'Israli Salad', 6, .5, null, 'teaspoon', 'black pepper', null
-   union select 'Israli Salad', 7, .5, null, 'teaspoon', 'garlic powder', null
-   union select 'Israli Salad', 8, .5, null, 'cup', 'oil', null
+   union select 'Israeli Salad', 2, 2, null, null, 'cucumber', null
+   union select 'Israeli Salad', 3, 1, 'small', null, 'red onion', null
+   union select 'Israeli Salad', 4, 2, 'small', null, 'pickle', null
+   union select 'Israeli Salad', 5, 1, null, 'teaspoon', 'salt', null
+   union select 'Israeli Salad', 6, .5, null, 'teaspoon', 'black pepper', null
+   union select 'Israeli Salad', 7, .5, null, 'teaspoon', 'garlic powder', null
+   union select 'Israeli Salad', 8, .5, null, 'cup', 'oil', null
    union select 'Peanut Chews', 1, 4, null, 'cup', 'rice crispies', null
    union select 'Peanut Chews', 2, 1, null, 'cup', 'peanut butter', null
    union select 'Peanut Chews', 3, 1, null, 'cup', 'oil', '(seperated)'
@@ -188,7 +189,7 @@ with x as(
    union select 'Butter Muffins', 3, 'Slowly add rest of ingredients and mix well.'
    union select 'Butter Muffins', 4, 'Fill muffin pans 3/4 full and bake for 30 minutes.'
    union select 'Israeli Salad', 1, 'Dice the tomatoes, pickles, cucumbers, and red onion into small pieces.'
-   union select 'Isralei Salad', 2, 'Toss with the oil, salt, black pepper, and garlic powder.'
+   union select 'Israeli Salad', 2, 'Toss with the oil, salt, black pepper, and garlic powder.'
    union select 'Peanut Chews', 1, 'In a pot, add peanut butter, sugar, honey, and a 1/5 cup oil.'
    union select 'Peanut Chews', 2, 'Stir over medium flame until fully melted.'
    union select 'Peanut Chews', 3, 'Slowly add in the rice crispies while mixing.'
