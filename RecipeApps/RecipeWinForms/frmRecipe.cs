@@ -11,15 +11,18 @@ namespace RecipeWinForms
 {
     public partial class frmRecipe : Form
     {
+        List<Label> lstrecipeinfolabels;
         public frmRecipe()
         {
             InitializeComponent();
+            lstrecipeinfolabels = new() {lblRecipeName, lblAuthor, lblRecipeStatus, lblCuisineType, lblCalories, lblDateDrafted, lblDatePublished, lblDateArchived};
         }
 
         public void ShowRecipeInfo(int recipeid)
         {
             string sql = "select r.RecipeId, r.RecipeName, Author = concat(ua.FirstName, ' ', ua.LastName), r.RecipeStatus, ct.CuisineTypeName, r.CalorieCount, r.DraftedDate, r.PublishedDate, r.ArchivedDate from Recipe r join UserAccount ua on r.UserId = ua.UserId join CuisineType ct on ct.CuisineTypeId = r.CuisineTypeId where r.RecipeId = " + recipeid.ToString();
             DataTable dt = SQLUtility.GetDataTable(sql);
+            ClearBindings();
             lblRecipeName.DataBindings.Add("Text", dt, "RecipeName");
             lblAuthor.DataBindings.Add("Text", dt, "Author");
             lblRecipeStatus.DataBindings.Add("Text", dt, "RecipeStatus");
@@ -28,7 +31,11 @@ namespace RecipeWinForms
             lblDateDrafted.DataBindings.Add("Text", dt, "DraftedDate");
             lblDatePublished.DataBindings.Add("Text", dt, "PublishedDate");
             lblDateArchived.DataBindings.Add("Text", dt, "ArchivedDate");
-            this.Show();
+        }
+
+        private void ClearBindings()
+        {
+            lstrecipeinfolabels.ForEach(l => l.DataBindings.Clear());
         }
 
         public void ShowRecipeIngredients(int recipeid)

@@ -121,7 +121,7 @@
             Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Margin = new Padding(4);
             Name = "frmSearch";
-            Text = "frmSearch";
+            Text = "Recipe Search";
             tblMain.ResumeLayout(false);
             tblSearch.ResumeLayout(false);
             tblSearch.PerformLayout();

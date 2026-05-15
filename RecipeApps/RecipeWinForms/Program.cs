@@ -13,7 +13,7 @@ namespace RecipeWinForms
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            SQLUtility.ConnectionString = "Server=tcp:avigayile.database.windows.net,1433;Initial Catalog=HeartyHearthDB;Persist Security Info=False;User ID=avigayile613;Password=MyPassword;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
+            SQLUtility.ConnectionString = "Server=.\\SQLExpress02;Database=HeartyHearthDB;Trusted_Connection=true;TrustServerCertificate=True;";
             Application.Run(new frmSearch());
         }
     }
